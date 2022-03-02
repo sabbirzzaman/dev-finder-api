@@ -9,7 +9,8 @@
     --placeholder: rgb(255, 255, 255);
     --white: rgb(255, 255, 255);
 
-    --text-lg: 24px;
+    --text-lg: 20px;
+    --test-sm: 15px;
 }
 
 /* Main layout */
@@ -23,6 +24,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--main-bg);
     color: var(--font-color);
+    font-size: var(--test-sm);
 }
 
 .user-search {
@@ -36,6 +38,16 @@ body {
     margin: 0 auto;
 }
 
+h2 {
+    font-size: var(--text-lg);
+    color: var(--white);
+}
+
+img {
+    width: 100%;
+    border-radius: 50%;
+}
+
 /* Header css */
 .header {
     color: var(--white);
@@ -45,8 +57,9 @@ body {
     margin-bottom: 20px;
 }
 
-.site-logo {
+.site-logo h2 {
     font-size: var(--text-lg);
+    letter-spacing: 2px;
 }
 
 /* Search bar */
@@ -91,4 +104,55 @@ button#search-btn {
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* User information */
+.user {
+    background-color: var(--box-bg);
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 80%;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.username {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.bio {
+    margin-bottom: 20px;
+}
+
+.activity {
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.other-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    align-items: center;
+}
+
+.item i {
+    color: var(--white);
 }
