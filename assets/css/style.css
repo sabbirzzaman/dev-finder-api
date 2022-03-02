@@ -193,3 +193,33 @@ button#search-btn {
 .light-other-info div i {
     color: var(--black);
 }
+
+/* Mobile responsive */
+@media only screen and (max-width: 668px) {
+    .container {
+        width: 325px;
+    }
+
+    img {
+        width: 50%;
+    }
+
+    .user {
+        text-align: center;
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .name {
+        display: block;
+    }
+
+    .activity {
+        padding: 10px;
+    }
+
+    .item {
+        grid-template-columns: 20% 1fr;
+        text-align: left;
+    }
+}
