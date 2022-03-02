@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* Root Css */
+:root {
+    --primary-color: rgb(2, 120, 253);
+    --main-bg: rgb(20, 28, 47);
+    --box-bg: rgb(31, 42, 72);
+    --font-color: rgb(140, 148, 167);
+    --placeholder: rgb(255, 255, 255);
+    --white: rgb(255, 255, 255);
+
+    --text-lg: 24px;
+}
+
+/* Main layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--main-bg);
+    color: var(--font-color);
+}
+
+.user-search {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+/* Header css */
+.header {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.site-logo {
+    font-size: var(--text-lg);
+}
+
+/* Search bar */
+.search-dev {
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    background-color: var(--box-bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search-bar i {
+    color: var(--primary-color);
+}
+
+input#search-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    color: var(--white);
+}
+
+input#search-input:focus {
+    outline: none;
+}
+
+input#search-input::placeholder {
+    color: var(--font-color);
+}
+
+button#search-btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
