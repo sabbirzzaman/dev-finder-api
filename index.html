@@ -44,61 +44,61 @@
                         <div class="search-bar">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <input id="search-input" type="text" placeholder="Search github username...">
-                            <button id="search-btn">Search</button>
+                            <button onclick="loadData()" id="search-btn">Search</button>
                         </div>
                     </div>
 
                     <!-- User info -->
                     <div class="user">
                         <div class="user-image">
-                            <img src="https://avatars.githubusercontent.com/u/76956355?v=4" alt="">
+                            <img id="user-img" src="https://avatars.githubusercontent.com/u/76956355?v=4" alt="">
                         </div>
 
                         <div class="user-info">
                             <div class="name">
-                                <h2>Sabbir Zzaman</h2>
-                                <p class="join">Join 2022 Dec</p>
+                                <h2 id="name">Sabbir Zzaman</h2>
+                                <p>Joined <span id="join">Jan 2022</span></p>
                             </div>
 
                             <div class="username">
-                                <p>sabbirzzaman</p>
+                                <p id="username">sabbirzzaman</p>
                             </div>
 
                             <div class="bio">
-                                <p>This profile has no bio.</p>
+                                <p id="bio">This profile has no bio.</p>
                             </div>
 
                             <div class="activity">
                                 <div class="repo">
                                     <p>Repos</p>
-                                    <h2>28</h2>
+                                    <h2 id="repo">28</h2>
                                 </div>
                                 <div class="followers">
                                     <p>Followers</p>
-                                    <h2>348</h2>
+                                    <h2 id="followers">348</h2>
                                 </div>
                                 <div class="following">
                                     <p>Following</p>
-                                    <h2>34</h2>
+                                    <h2 id="following">34</h2>
                                 </div>
                             </div>
 
                             <div class="other-info">
                                 <div class="item address">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <span>Bangladesh</span>
+                                    <span id="address">Bangladesh</span>
                                 </div>
                                 <div class="item twitter">
                                     <i class="fa-brands fa-twitter"></i>
-                                    <span>Not set</span>
+                                    <span id="twitter">Not set</span>
                                 </div>
                                 <div class="item link">
                                     <i class="fa-solid fa-link"></i>
-                                    <span>Link</span>
+                                    <span id="link">Link</span>
                                 </div>
                                 <div class="item company">
                                     <i class="fa-solid fa-building"></i>
-                                    <span>Google</span>
+                                    <span id="company">Google</span>
                                 </div>
                             </div>
                         </div>
