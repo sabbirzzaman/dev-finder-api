@@ -4,10 +4,12 @@
 :root {
     --primary-color: rgb(2, 120, 253);
     --main-bg: rgb(20, 28, 47);
+    --light-bg: rgb(245, 248, 255);
     --box-bg: rgb(31, 42, 72);
     --font-color: rgb(140, 148, 167);
     --placeholder: rgb(255, 255, 255);
     --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
 
     --text-lg: 20px;
     --test-sm: 15px;
@@ -60,6 +62,10 @@ img {
 .site-logo h2 {
     font-size: var(--text-lg);
     letter-spacing: 2px;
+}
+
+#theme-toggle {
+    cursor: pointer;
 }
 
 /* Search bar */
@@ -155,4 +161,35 @@ button#search-btn {
 
 .item i {
     color: var(--white);
+}
+
+/* Light Theme */
+.light-bg {
+    background-color: var(--light-bg);
+    color: var(--black);
+}
+
+.light-header {
+    color: var(--black);
+}
+
+.light-search-bar .search-bar {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.light-search-bar .search-bar input#search-input {
+    color: var(--black);
+}
+
+.light-user-info {
+   background-color: var(--white);
+}
+
+.light-user-info .user-info .activity {
+   background-color: var(--light-bg);
+}
+
+.light-other-info div i {
+    color: var(--black);
 }

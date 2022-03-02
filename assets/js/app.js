@@ -7,6 +7,7 @@ const selectElement = (id) => {
 // Select global elements
 const searchInput = selectElement('search-input');
 const searchBtn = selectElement('search-btn');
+const themeToggle = selectElement('theme-toggle');
 
 // Search button event handler
 loadData = async () => {
@@ -56,3 +57,33 @@ const displayData = (data) => {
     link.innerText = blogUrl.slice(0, -1)
     company.innerText = data.company;
 };
+
+themeToggle.addEventListener('click', () => {
+    const toggleContainer = document.getElementById('theme-toggle');
+    const h2 = document.getElementsByTagName('h2');
+
+    if(toggleContainer.firstChild.innerText === 'Light') {
+        toggleContainer.textContent = '';
+        toggleContainer.innerHTML = `<span>Dark</span> <i class="fa-solid fa-moon"></i>`
+        for(element of h2) {
+            element.style.color = '#000'
+        }
+    } else {
+        toggleContainer.textContent = '';
+        toggleContainer.innerHTML = `<span>Light</span> <i class="fa-solid fa-sun"></i>`
+        for(element of h2) {
+            element.style.color = '#fff'
+        }
+    }
+
+    const body = document.body;
+    const header = document.querySelector('.header')
+    const searchBar = document.querySelector('.search-dev')
+    const userInfo = document.querySelector('.user')
+    const otherInfo = document.querySelector('.other-info')
+    body.classList.toggle('light-bg');
+    header.classList.toggle('light-header');
+    searchBar.classList.toggle('light-search-bar');
+    userInfo.classList.toggle('light-user-info');
+    otherInfo.classList.toggle('light-other-info');
+});
