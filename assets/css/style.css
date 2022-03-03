@@ -12,7 +12,8 @@
     --black: rgb(0, 0, 0);
 
     --text-lg: 20px;
-    --test-sm: 15px;
+    --text-sm: 15px;
+    --text-xsm: 13px;
 }
 
 /* Main layout */
@@ -26,7 +27,7 @@ body {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--main-bg);
     color: var(--font-color);
-    font-size: var(--test-sm);
+    font-size: var(--text-sm);
 }
 
 .user-search {
@@ -113,13 +114,17 @@ button#search-btn {
 }
 
 /* User information */
-.user {
+.user-information {
+    position: relative;
     background-color: var(--box-bg);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.user {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 80%;
-    padding: 30px;
-    border-radius: 10px;
 }
 
 .name {
@@ -163,6 +168,49 @@ button#search-btn {
     color: var(--white);
 }
 
+
+/* Loading Spinner */
+#spinner {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 42%;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: ' ';
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid var(--primary-color);
+    border-color: var(--primary-color) transparent var(--primary-color)
+        transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error msg */
+.error-msg {
+    padding: 120px 0;
+}
+
 /* Light Theme */
 .light-bg {
     background-color: var(--light-bg);
@@ -183,11 +231,11 @@ button#search-btn {
 }
 
 .light-user-info {
-   background-color: var(--white);
+    background-color: var(--white);
 }
 
 .light-user-info .user-info .activity {
-   background-color: var(--light-bg);
+    background-color: var(--light-bg);
 }
 
 .light-other-info div i {
@@ -196,6 +244,18 @@ button#search-btn {
 
 /* Mobile responsive */
 @media only screen and (max-width: 668px) {
+    #spinner {
+        top: 39%;
+        left: 38%;
+    }
+
+    body {
+        font-size: var(--text-xsm);
+    }
+    h2 {
+        font-size: 18px;
+    }
+
     .container {
         width: 325px;
     }
@@ -212,14 +272,24 @@ button#search-btn {
 
     .name {
         display: block;
+        margin-bottom: 5px;
+    }
+
+    #name {
+        margin-bottom: 5px;
     }
 
     .activity {
         padding: 10px;
     }
 
+    .other-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .item {
-        grid-template-columns: 20% 1fr;
-        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }

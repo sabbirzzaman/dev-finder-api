@@ -34,7 +34,10 @@
                         </div>
 
                         <div class="theme-toggle">
-                            <span id="theme-toggle"><span>Light</span> <i class="fa-solid fa-sun"></i></span>
+                            <span id="theme-toggle"
+                                ><span>Light</span
+                                > <i class="fa-solid fa-sun"></i
+                            ></span>
                         </div>
                     </div>
 
@@ -42,62 +45,77 @@
                     <div class="search-dev">
                         <div class="search-bar">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input id="search-input" type="text" placeholder="Search github username...">
-                            <button onclick="loadData()" id="search-btn">Search</button>
+                            <input
+                                id="search-input"
+                                type="text"
+                                placeholder="Search github username..."
+                            />
+                            <button onclick="loadData()" id="search-btn">
+                                Search
+                            </button>
                         </div>
                     </div>
 
                     <!-- User info -->
-                    <div class="user">
-                        <div class="user-image">
-                            <img id="user-img" src="https://avatars.githubusercontent.com/u/76956355?v=4" alt="">
+                    <div class="user-information">
+                        <div id="spinner">
+                            <div class="lds-dual-ring"></div>
                         </div>
-
-                        <div class="user-info">
-                            <div class="name">
-                                <h2 id="name">Sabbir Zzaman</h2>
-                                <p>Joined <span id="join">Jan 2022</span></p>
+                        <div id="user" class="user">
+                            <div class="user-image">
+                                <img
+                                    id="user-img"
+                                    src="https://avatars.githubusercontent.com/u/76956355?v=4"
+                                    alt=""
+                                />
                             </div>
-
-                            <div class="username">
-                                <p id="username">sabbirzzaman</p>
-                            </div>
-
-                            <div class="bio">
-                                <p id="bio">This profile has no bio.</p>
-                            </div>
-
-                            <div class="activity">
-                                <div class="repo">
-                                    <p>Repos</p>
-                                    <h2 id="repo">28</h2>
+    
+                            <div class="user-info">
+                                <div class="name">
+                                    <h2 id="name">Sabbir Zzaman</h2>
+                                    <p>Joined <span id="join">Jan 2022</span></p>
                                 </div>
-                                <div class="followers">
-                                    <p>Followers</p>
-                                    <h2 id="followers">348</h2>
+    
+                                <div class="username">
+                                    <p id="username">sabbirzzaman</p>
                                 </div>
-                                <div class="following">
-                                    <p>Following</p>
-                                    <h2 id="following">34</h2>
+    
+                                <div class="bio">
+                                    <p id="bio">This profile has no bio.</p>
                                 </div>
-                            </div>
-
-                            <div class="other-info">
-                                <div class="item address">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    <span id="address">Bangladesh</span>
+    
+                                <div class="activity">
+                                    <div class="repo">
+                                        <p>Repos</p>
+                                        <h2 id="repo">28</h2>
+                                    </div>
+                                    <div class="followers">
+                                        <p>Followers</p>
+                                        <h2 id="followers">348</h2>
+                                    </div>
+                                    <div class="following">
+                                        <p>Following</p>
+                                        <h2 id="following">34</h2>
+                                    </div>
                                 </div>
-                                <div class="item twitter">
-                                    <i class="fa-brands fa-twitter"></i>
-                                    <span id="twitter">Not set</span>
-                                </div>
-                                <div class="item link">
-                                    <i class="fa-solid fa-link"></i>
-                                    <span id="link">Link</span>
-                                </div>
-                                <div class="item company">
-                                    <i class="fa-solid fa-building"></i>
-                                    <span id="company">Google</span>
+    
+                                <div class="other-info">
+                                    <div class="item address">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span id="address">Bangladesh</span>
+                                    </div>
+                                    <div class="item twitter">
+                                        <i class="fa-brands fa-twitter"></i>
+                                        <span id="twitter">Not set</span>
+                                    </div>
+                                    <div class="item link">
+                                        <i class="fa-solid fa-link"></i>
+                                        <span id="link">Link</span>
+                                    </div>
+                                    <div class="item company">
+                                        <i class="fa-solid fa-building"></i>
+                                        <span id="company">Google</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
