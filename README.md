@@ -1,3 +1,4 @@
 # DevFinder 
-Search github profile with username
+# https://dev-finder-js.netlify.app/
 
+Search GitHub Profiles by username
